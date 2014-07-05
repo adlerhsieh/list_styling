@@ -1,4 +1,3 @@
 == README
 
-Enable a list of items to highlight themselves during mouseover event
-Enable display of delete or edit button during mouseover event 
+Enable a list of items to highlight themselves and display of delete or edit button during mouseover event.
