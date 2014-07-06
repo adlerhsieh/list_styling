@@ -1,5 +1,5 @@
 <h3><%= @post.title %></h3>
-<p style = "font-size:8px;"><%= @post.created_at.strftime("%I:%M, %d %b %y") %></p>
+<p style = "font-size:8px;">發佈時間：<%= @post.created_at.strftime("%I:%M, %d %b %y") %></p>
 <hr/>
 <p><%= @post.content %></p>
-<%= link_to "回到列表", posts_path, :class => "tiny button" %>
+<%= link_to "編輯", edit_post_path(@post), :class => "tiny button" %>&nbsp;<%= link_to "回到列表", posts_path, :class => "tiny button" %>

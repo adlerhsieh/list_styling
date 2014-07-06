@@ -1,0 +1,7 @@
+<h3>編輯文章</h3>
+
+<%= form_for @post do |post| %>
+	<p>標題：<%= post.text_field :title %></p>
+	<p>內容：<%= post.text_area :content %></p>
+	<p><%= post.submit "送出", :class => "tiny button" %>&nbsp;<%= link_to "取消", posts_path, :class => "tiny button alert"%></p>
+<% end %>

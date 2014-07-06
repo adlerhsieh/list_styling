@@ -36,8 +36,11 @@
 	height: 50px;
 }
 
-
 .post_item:hover .delete_button{
+	display: block;
+}
+
+.post_item:hover .edit_button{
 	display: block;
 }
 
@@ -51,10 +54,18 @@
 	display: inline;
 }
 
+.edit_button {
+	display: none;
+	margin-left: auto;
+	margin-right: 100px;
+	width: 70px;
+	margin-top: -43px;
+}
+
 .delete_button {
 	display: none;
 	margin-left: auto;
 	margin-right: 20px;
-	width: 100px;
-	margin-top: -42px;
+	width: 70px;
+	margin-top: -55px;
 }
