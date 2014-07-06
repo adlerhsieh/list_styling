@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="small-10 columns"><%= link_to "新文章", new_post_path, :class => "tiny button" %></div>
+	<div class="small-10 columns"><%= link_to "發佈新文章", new_post_path, :class => "tiny button" %></div>
 	<%= form_tag posts_path, method: :get do %>
 		<div class="small-2 columns"><%= text_field_tag :search, params[:search], placeholder: "Search" %></div>
 	<% end %>
