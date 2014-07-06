@@ -7,5 +7,5 @@
 <%= render partial: "layouts/flash" %>
 <hr/>
 <% @post.each do |post| %>
-	<div class="post_item"><h3 class="post_title"><%= link_to post.title, post_path(post) %></h3><%= link_to "編輯", edit_post_path(post), :class => "tiny button edit_button" %><%= link_to "刪除", post_path(post), method: :delete, data: {confirm: "是否確定要刪除？"}, :class => "tiny button alert delete_button" %></div>
+	<div class="post_item"><% if post.image_url %><%= image_tag post.image_url(:thumb2).to_s, :class => "index_thumb" %><% end %><h3 class="post_title"><%= link_to post.title, post_path(post) %></h3><%= link_to "編輯", edit_post_path(post), :class => "tiny button edit_button" %><%= link_to "刪除", post_path(post), method: :delete, data: {confirm: "是否確定要刪除？"}, :class => "tiny button alert delete_button" %></div>
 <% end %>

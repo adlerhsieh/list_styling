@@ -1,0 +1,6 @@
+<%= form_for @post do |post| %>
+	<p>標題：<%= post.text_field :title %></p>
+	<p>內容：<%= post.text_area :content %></p>
+	<p>上傳圖片：<%= post.file_field :image %></p>
+	<p><%= post.submit "送出", :class => "tiny button" %>&nbsp;<%= link_to "回到列表", posts_path, :class => "tiny button" %></p>
+<% end %>

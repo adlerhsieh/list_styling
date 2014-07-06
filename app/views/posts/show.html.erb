@@ -1,5 +1,8 @@
 <h3><%= @post.title %></h3>
 <p style = "font-size:8px;">發佈時間：<%= @post.created_at.strftime("%I:%M, %d %b %y") %></p>
 <hr/>
+<% if @post.image_url %>
+	<p><%= image_tag @post.image_url(:thumb).to_s %></p>
+<% end %>
 <p><%= @post.content %></p>
 <%= link_to "編輯", edit_post_path(@post), :class => "tiny button" %>&nbsp;<%= link_to "回到列表", posts_path, :class => "tiny button" %>
