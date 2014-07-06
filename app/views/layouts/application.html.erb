@@ -7,10 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<div class="container">
-<%= yield %>
+<div class="fixed">
+	<nav class="top-bar" data-topbar>
+		<ul class="title-area">
+			<li class="name">
+				<h1><%= link_to "列表總覽", posts_path %></h1>
+			</li>
+		</ul>
+	</nav>
 </div>
-
+		<div class="container">
+			<%= yield %>
+		</div>
 </body>
 </html>

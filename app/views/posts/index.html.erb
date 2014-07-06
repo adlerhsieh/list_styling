@@ -1,6 +1,6 @@
-<span class="page_title">所有文章</span><%= link_to "新文章", new_post_path, :class => "tiny button margin-left-small" %>
+<span class="page_title">文章列表</span><%= link_to "新文章", new_post_path, :class => "tiny button margin-left-small" %>
 <%= render partial: "layouts/flash" %>
 <hr/>
 <% @post.each do |post| %>
-	<div class="post_item"><h3 class="post_title"><%= post.id %>. <%= post.title %></h3><%= link_to "刪除", post_path(post), method: :delete, data: {confirm: "是否確定要刪除？"}, :class => "tiny button alert delete_button" %></div>
+	<div class="post_item"><h3 class="post_title"><%= link_to post.title, post_path(post) %></h3><%= link_to "刪除", post_path(post), method: :delete, data: {confirm: "是否確定要刪除？"}, :class => "tiny button alert delete_button" %></div>
 <% end %>
